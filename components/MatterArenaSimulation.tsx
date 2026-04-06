@@ -45,7 +45,7 @@ export default function MatterArenaSimulation({
       },
     });
 
-    const wallOptions: Matter.IBodyDefinition = { isStatic: true, render: { fillStyle: '#2a2a2a' } };
+    const wallOptions = { isStatic: true, render: { fillStyle: '#2a2a2a' } };
     const walls = [
       Matter.Bodies.rectangle(ARENA_WIDTH / 2, -10, ARENA_WIDTH, 20, wallOptions),
       Matter.Bodies.rectangle(ARENA_WIDTH / 2, ARENA_HEIGHT + 10, ARENA_WIDTH, 20, wallOptions),
