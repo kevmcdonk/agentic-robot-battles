@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import SessionProvider from '@/components/SessionProvider';
-import AuthenticatedNav from '@/components/AuthenticatedNav';
+import AuthenticatedNavLoader from '@/components/AuthenticatedNavLoader';
 
 export const metadata: Metadata = {
   title: 'Agentic Robot Battles',
@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="font-sans antialiased">
         <SessionProvider>
-          <AuthenticatedNav />
+          <AuthenticatedNavLoader />
           {children}
         </SessionProvider>
       </body>
